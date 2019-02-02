@@ -17,6 +17,9 @@ curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rp
 sudo EXTERNAL_URL="http://192.168.55.50" yum install -y gitlab-ee
 
 # Set default password
+# Trying to figure out how to bypass the inital web prompt to change sign on.
+# It's super hacky, but I may have to just end up creating a tarball of an
+# "gold" gitlab install with some initial setup already completed.
 echo 'u = User.where(id:1).first
 u.password = "swordfish"
 u.password_confirmation = "swordfish"
