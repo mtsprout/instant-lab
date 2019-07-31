@@ -30,7 +30,7 @@ systemctl disable firewalld
 # When the agent returns a non-zero exit code (i.e. Puppet made changes, but we still want Vagrant to not report an error.
 /usr/local/bin/puppet agent -t || true
 
-# also useful if the security wonks don't allow egress on port 22.  See my wiki space for that workaround.
+# also useful if the security wonks don't allow egress on port 22.
 yum -y install git
 
 # Get a "starter" control-repo
